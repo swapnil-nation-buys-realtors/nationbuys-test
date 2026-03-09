@@ -144,13 +144,12 @@ export default function WhyChooseUs() {
           {REASONS.map(({ title, body, Icon }, i) => (
             <div key={i} className="wcu-anim" style={{
               opacity:0, transform:'translateX(24px)',
-              transition:`all 0.75s ease ${(i+1)*0.09}s`,
+              transition:`all 0.75s ease ${(i+1)*0.09}s background 0.25s`,
               flex:1,
               display:'flex', alignItems:'flex-start', gap:'1.1rem',
               padding:'1.75rem 2.25rem',
               borderBottom: i < 3 ? '1px solid rgba(255,255,255,0.042)' : 'none',
               cursor:'default',
-              transition1:'background 0.25s',
               position:'relative',
             }}
             onMouseEnter={e=>{
