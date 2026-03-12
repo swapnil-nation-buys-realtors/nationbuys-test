@@ -41,7 +41,7 @@ const ALL_LOGOS = [...LOGOS, ...LOGOS]
 export default function LegacyTrustSection() {
   const [active, setActive] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
-  const timerRef = useRef<ReturnType<typeof setInterval>>()
+  const timerRef = useRef<ReturnType<typeof setInterval> | any>(null)
 
   useEffect(() => {
     timerRef.current = setInterval(() => setActive(a => (a + 1) % TESTIMONIALS.length), 5500)
