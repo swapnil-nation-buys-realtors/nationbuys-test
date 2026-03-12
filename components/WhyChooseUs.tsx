@@ -56,15 +56,14 @@ export default function WhyChooseUs() {
 
   return (
     <section ref={ref} style={{ background:'var(--ink)', overflow:'hidden' }}>
-      <div style={{ maxWidth:'1280px', margin:'0 auto', display:'grid', gridTemplateColumns:'1fr 1.35fr', minHeight:'560px' }}>
+      <div style={{ maxWidth:'1280px', margin:'0 auto' }} className="wcu-layout">
 
-        {/* ── LEFT: "Where Vision, Craft, and Luxury Align" ── */}
-        <div className="wcu-anim" style={{
+        {/* ── LEFT panel ── */}
+        <div className="wcu-anim wcu-left" style={{
           opacity:0, transform:'translateX(-24px)',
           transition:'all 0.85s ease',
-          padding:'5rem 4rem',
+          padding:'clamp(3rem,6vw,5rem) clamp(1.5rem,4vw,4rem)',
           display:'flex', flexDirection:'column', justifyContent:'center',
-          borderRight:'1px solid rgba(255,255,255,0.04)',
           position:'relative',
           overflow:'hidden',
         }}>
@@ -72,29 +71,27 @@ export default function WhyChooseUs() {
           <span style={{
             position:'absolute', bottom:'-1rem', left:'-1rem',
             fontFamily:'Cormorant Garamond,serif',
-            fontSize:'11rem', fontWeight:300, lineHeight:1,
+            fontSize:'clamp(6rem,15vw,11rem)', fontWeight:300, lineHeight:1,
             color:'transparent',
             WebkitTextStroke:'1px rgba(201,168,76,0.05)',
             userSelect:'none', pointerEvents:'none',
             letterSpacing:'0.05em',
           }}>NBR</span>
 
-          {/* Small label — exactly like ref */}
           <p style={{
-            fontFamily:'Jost,sans-serif', fontSize:'0.62rem',
+            fontFamily:'Jost,sans-serif', fontSize:'clamp(0.55rem,1.5vw,0.62rem)',
             letterSpacing:'0.3em', textTransform:'uppercase',
             color:'rgba(201,168,76,0.72)', fontWeight:400,
             marginBottom:'1.25rem',
             display:'flex', alignItems:'center', gap:'10px',
           }}>
-            <span style={{ display:'inline-block', width:'28px', height:'1px', background:'rgba(201,168,76,0.5)' }}/>
+            <span style={{ display:'inline-block', width:'28px', height:'1px', background:'rgba(201,168,76,0.5)', flexShrink:0 }}/>
             Why Choose Us
           </p>
 
-          {/* Big heading — ref: "Where Vision, Craft, and Luxury Align" */}
           <h2 style={{
             fontFamily:'Cormorant Garamond,serif',
-            fontSize:'clamp(2rem,3vw,2.8rem)',
+            fontSize:'clamp(1.8rem,4vw,2.8rem)',
             fontWeight:300,
             color:'rgba(255,255,255,0.92)',
             lineHeight:1.2,
@@ -108,14 +105,14 @@ export default function WhyChooseUs() {
           </h2>
 
           <p style={{
-            fontFamily:'Jost,sans-serif', fontSize:'0.75rem',
+            fontFamily:'Jost,sans-serif', fontSize:'clamp(0.68rem,1.5vw,0.75rem)',
             color:'rgba(255,255,255,0.35)', fontWeight:300,
-            lineHeight:1.78, maxWidth:'340px', marginBottom:'2.5rem',
+            lineHeight:1.78, maxWidth:'min(340px,100%)', marginBottom:'2.5rem',
           }}>
             At NBR Realty, extraordinary outcomes demand extraordinary people — visionaries who see value where others see vacant land.
           </p>
 
-          {/* Client count — matches ref "130k+ People Join" style */}
+          {/* Client avatars */}
           <div style={{ display:'flex', alignItems:'center', gap:'14px' }}>
             <div style={{ display:'flex' }}>
               {['#C8A050','#B08060','#D4B880','#A09070'].map((c,i) => (
@@ -126,51 +123,47 @@ export default function WhyChooseUs() {
                   marginLeft: i > 0 ? '-10px' : '0',
                   display:'flex', alignItems:'center', justifyContent:'center',
                   fontFamily:'Jost,sans-serif', fontSize:'0.6rem', fontWeight:600, color:'#111',
-                  zIndex: 4-i,
+                  zIndex: 4-i, flexShrink:0,
                 }}>
                   {['R','S','A','K'][i]}
                 </div>
               ))}
             </div>
             <div>
-              <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.78rem', fontWeight:500, color:'rgba(255,255,255,0.78)' }}>500+ Clients Served</p>
-              <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.6rem', color:'rgba(255,255,255,0.28)', fontWeight:300 }}>Across India & Dubai</p>
+              <p style={{ fontFamily:'Jost,sans-serif', fontSize:'clamp(0.68rem,1.5vw,0.78rem)', fontWeight:500, color:'rgba(255,255,255,0.78)' }}>500+ Clients Served</p>
+              <p style={{ fontFamily:'Jost,sans-serif', fontSize:'clamp(0.55rem,1.2vw,0.6rem)', color:'rgba(255,255,255,0.28)', fontWeight:300 }}>Across India & Dubai</p>
             </div>
           </div>
         </div>
 
-        {/* ── RIGHT: 4 stacked tiles — exactly matching ref image 2 ── */}
-        <div style={{ display:'flex', flexDirection:'column' }}>
+        {/* ── RIGHT: 4 reason tiles ── */}
+        <div className="wcu-right">
           {REASONS.map(({ title, body, Icon }, i) => (
-            <div key={i} className="wcu-anim" style={{
+            <div key={i} className="wcu-anim wcu-tile" style={{
               opacity:0, transform:'translateX(24px)',
-              transition:`all 0.75s ease ${(i+1)*0.09}s background 0.25s`,
+              transition:`all 0.75s ease ${(i+1)*0.09}s`,
               flex:1,
-              display:'flex', alignItems:'flex-start', gap:'1.1rem',
-              padding:'1.75rem 2.25rem',
-              borderBottom: i < 3 ? '1px solid rgba(255,255,255,0.042)' : 'none',
+              display:'flex', alignItems:'flex-start', gap:'clamp(0.75rem,2vw,1.1rem)',
+              padding:'clamp(1.25rem,2.5vw,1.75rem) clamp(1.25rem,3vw,2.25rem)',
               cursor:'default',
               position:'relative',
+              minHeight: '0',
             }}
             onMouseEnter={e=>{
-              const el = e.currentTarget as HTMLElement
-              el.style.background='rgba(201,168,76,0.04)'
+              (e.currentTarget as HTMLElement).style.background='rgba(201,168,76,0.04)'
             }}
             onMouseLeave={e=>{
-              const el = e.currentTarget as HTMLElement
-              el.style.background='transparent'
+              (e.currentTarget as HTMLElement).style.background='transparent'
             }}
             >
-              {/* Left hover bar */}
               <div style={{
                 position:'absolute', left:0, top:0, bottom:0, width:'2px',
                 background:'linear-gradient(180deg,transparent,var(--gold),transparent)',
                 opacity:0, transition:'opacity 0.25s',
               }} className="wcu-bar"/>
 
-              {/* Icon box — matches ref exactly */}
               <div style={{
-                flexShrink:0, width:'38px', height:'38px',
+                flexShrink:0, width:'36px', height:'36px',
                 border:'1px solid rgba(201,168,76,0.2)',
                 display:'flex', alignItems:'center', justifyContent:'center',
                 color:'var(--gold)',
@@ -182,22 +175,21 @@ export default function WhyChooseUs() {
               <div style={{ flex:1 }}>
                 <h3 style={{
                   fontFamily:'Cormorant Garamond,serif',
-                  fontSize:'1.15rem', fontWeight:500,
+                  fontSize:'clamp(1rem,2vw,1.15rem)', fontWeight:500,
                   color:'rgba(255,255,255,0.88)',
-                  marginBottom:'0.38rem',
+                  marginBottom:'0.35rem',
                   letterSpacing:'0.01em',
                 }}>{title}</h3>
                 <p style={{
                   fontFamily:'Jost,sans-serif',
-                  fontSize:'0.72rem', fontWeight:300,
+                  fontSize:'clamp(0.65rem,1.3vw,0.72rem)', fontWeight:300,
                   color:'rgba(255,255,255,0.38)',
                   lineHeight:1.72,
                 }}>{body}</p>
               </div>
 
-              {/* Arrow icon like ref */}
               <div style={{
-                flexShrink:0, width:'30px', height:'30px', alignSelf:'center',
+                flexShrink:0, width:'28px', height:'28px', alignSelf:'center',
                 border:'1px solid rgba(201,168,76,0.15)',
                 display:'flex', alignItems:'center', justifyContent:'center',
                 color:'rgba(201,168,76,0.5)',
@@ -211,9 +203,46 @@ export default function WhyChooseUs() {
           ))}
         </div>
       </div>
+
       <style>{`
+        .wcu-layout {
+          display: grid;
+          grid-template-columns: 1fr 1.35fr;
+          min-height: 560px;
+        }
+        .wcu-left {
+          border-right: 1px solid rgba(255,255,255,0.04);
+        }
+        .wcu-right {
+          display: flex;
+          flex-direction: column;
+        }
+        .wcu-tile {
+          border-bottom: 1px solid rgba(255,255,255,0.042);
+        }
+        .wcu-tile:last-child {
+          border-bottom: none;
+        }
         .wcu-anim:hover .wcu-bar  { opacity:1 !important; }
         .wcu-anim:hover .wcu-arrow{ opacity:1 !important; }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+          .wcu-layout {
+            grid-template-columns: 1fr;
+          }
+          .wcu-left {
+            border-right: none;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            min-height: auto;
+          }
+        }
+        /* Mobile */
+        @media (max-width: 580px) {
+          .wcu-layout {
+            min-height: auto;
+          }
+        }
       `}</style>
     </section>
   )

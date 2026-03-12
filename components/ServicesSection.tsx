@@ -108,7 +108,7 @@ export default function ServicesSection() {
   }, [])
 
   return (
-    <section ref={ref} style={{ background: 'var(--smoke)', padding: '6rem 5rem' }}>
+    <section ref={ref} style={{ background: '#E2DDD6', padding: '6rem 5rem' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
         {/* Header */}
@@ -117,17 +117,17 @@ export default function ServicesSection() {
             <p style={{ fontFamily: 'Jost,sans-serif', fontSize: '0.6rem', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'var(--gold-dim)', fontWeight: 400, marginBottom: '0.5rem' }}>
               Our Services
             </p>
-            <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(2.5rem,4.5vw,3.8rem)', fontWeight: 300, color: '#0d0d0d', lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: 'clamp(2.5rem,4.5vw,3.8rem)', fontWeight: 300, color: '#2a2318', lineHeight: 1.1 }}>
               What We Offer
             </h2>
           </div>
-          <p style={{ fontFamily: 'Jost,sans-serif', fontSize: '0.72rem', color: 'rgba(0,0,0,0.42)', fontWeight: 300, maxWidth: '260px', textAlign: 'right', lineHeight: 1.65 }}>
+          <p style={{ fontFamily: 'Jost,sans-serif', fontSize: '0.72rem', color: 'rgba(30,20,10,0.42)', fontWeight: 300, maxWidth: '260px', textAlign: 'right', lineHeight: 1.65 }}>
             We are redefining real estate with innovation and excellence.
           </p>
         </div>
 
         {/* Divider */}
-        <div style={{ height: '1px', background: 'rgba(0,0,0,0.08)', marginBottom: '2rem' }}/>
+        <div style={{ height: '1px', background: 'rgba(0,0,0,0.1)', marginBottom: '2rem' }}/>
 
         {/* Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
@@ -140,8 +140,8 @@ export default function ServicesSection() {
                 style={{
                   opacity: 0, transform: 'translateY(18px)',
                   transition: 'opacity 0.6s ease, transform 0.6s ease',
-                  background: '#fff',
-                  border: '1px solid rgba(0,0,0,0.06)',
+                  background: '#EAE5DD',
+                  border: '1px solid rgba(0,0,0,0.09)',
                   display: 'flex',
                   flexDirection: 'row',
                   overflow: 'hidden',
@@ -158,7 +158,7 @@ export default function ServicesSection() {
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget as HTMLElement
-                  el.style.borderColor = 'rgba(0,0,0,0.06)'
+                  el.style.borderColor = 'rgba(0,0,0,0.09)'
                   el.style.boxShadow = 'none'
                   el.style.transform = 'translateY(0)'
                   const img = el.querySelector<HTMLImageElement>('.svc-img')
@@ -205,13 +205,13 @@ export default function ServicesSection() {
                   </span>
 
                   {/* Title */}
-                  <h3 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: '1rem', fontWeight: 500, color: '#111', lineHeight: 1.2, margin: 0, flexShrink: 0 }}>
+                  <h3 style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: '1rem', fontWeight: 500, color: '#2a2318', lineHeight: 1.2, margin: 0, flexShrink: 0 }}>
                     {svc.title}
                   </h3>
 
                   {/* Desc */}
                   <p style={{
-                    fontFamily: 'Jost,sans-serif', fontSize: '0.65rem', color: 'rgba(0,0,0,0.44)',
+                    fontFamily: 'Jost,sans-serif', fontSize: '0.65rem', color: 'rgba(30,20,10,0.46)',
                     fontWeight: 300, lineHeight: 1.55, margin: 0,
                     overflow: 'hidden',
                     display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',

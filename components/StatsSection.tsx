@@ -21,7 +21,6 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
       if (!e.isIntersecting || fired.current) return
       fired.current = true
       setTimeout(() => {
-        // Counter
         const dur = 1800, steps = 60
         let i = 0
         const step = Math.max(1, Math.ceil(s.val / steps))
@@ -30,7 +29,6 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
           if (i >= s.val) { setCount(s.val); clearInterval(t) }
           else setCount(i)
         }, dur / steps)
-        // Bar
         setTimeout(() => setBar(s.progress), 80)
       }, delay)
     }, { threshold: 0.3 })
@@ -42,11 +40,11 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
     <div ref={ref} style={{
       background: 'rgba(18,18,18,0.75)',
       border: '1px solid rgba(201,168,76,0.1)',
-      padding: '2rem 1.75rem',
+      padding: 'clamp(1.25rem,3vw,2rem) clamp(1rem,2.5vw,1.75rem)',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      minHeight: '190px',
+      minHeight: 'clamp(150px,20vw,190px)',
       cursor: 'default',
       transition: 'border-color 0.3s, background 0.3s',
     }}
@@ -61,11 +59,10 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
       el.style.background  = 'rgba(18,18,18,0.42)'
     }}
     >
-      {/* Top label */}
       <div>
         <p style={{
           fontFamily:'Jost,sans-serif',
-          fontSize:'0.72rem',
+          fontSize:'clamp(0.65rem,1.5vw,0.72rem)',
           fontWeight:400,
           letterSpacing:'0.06em',
           color:'rgba(255,255,255,0.52)',
@@ -73,7 +70,7 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
         }}>{s.label}</p>
         <p style={{
           fontFamily:'Jost,sans-serif',
-          fontSize:'0.58rem',
+          fontSize:'clamp(0.52rem,1.2vw,0.58rem)',
           fontWeight:300,
           color:'rgba(255,255,255,0.22)',
           marginTop:'3px',
@@ -81,12 +78,11 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
         }}>{s.sub}</p>
       </div>
 
-      {/* Number + progress bar — exactly like ref */}
       <div>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'10px' }}>
           <span style={{
             fontFamily:'Cormorant Garamond,serif',
-            fontSize:'clamp(2.6rem,4vw,3.4rem)',
+            fontSize:'clamp(2rem,5vw,3.4rem)',
             fontWeight:300,
             lineHeight:1,
             background:'linear-gradient(135deg,#E2C07A,#C9A84C)',
@@ -96,13 +92,12 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
           }}>{count.toLocaleString()}{s.suffix}</span>
           <span style={{
             fontFamily:'Jost,sans-serif',
-            fontSize:'0.68rem',
+            fontSize:'clamp(0.58rem,1.2vw,0.68rem)',
             fontWeight:400,
             color:'rgba(201,168,76,0.65)',
             paddingBottom:'4px',
           }}>{s.progress}%</span>
         </div>
-        {/* Progress track */}
         <div style={{ position:'relative', height:'2px', background:'rgba(255,255,255,0.08)', borderRadius:'1px' }}>
           <div style={{
             position:'absolute', left:0, top:0, height:'100%',
@@ -111,7 +106,6 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
             borderRadius:'1px',
             transition:'width 1.6s cubic-bezier(0.4,0,0.2,1)',
           }}/>
-          {/* Glowing tip */}
           <div style={{
             position:'absolute', top:'50%', transform:'translateY(-50%)',
             left:`calc(${bar}% - 4px)`,
@@ -128,49 +122,45 @@ function StatCard({ s, delay }: { s: typeof STATS[0]; delay: number }) {
 
 export default function StatsSection() {
   return (
-    <section style={{ position:'relative', padding:'7rem 5rem', overflow:'hidden' }}>
-      {/* BG image + heavy overlay */}
+    <section style={{ position:'relative', padding:'clamp(4rem,8vw,7rem) clamp(1.25rem,5vw,5rem)', overflow:'hidden' }}>
+      {/* BG image */}
       <div style={{ position:'absolute', inset:0, zIndex:0 }}>
         <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=60"
           alt="" style={{ width:'100%', height:'100%', objectFit:'cover', filter:'brightness(0.35)' }}/>
         <div style={{ position:'absolute', inset:0, background:'rgba(8,8,8,0.72)' }}/>
-        {/* Gold radial glow */}
         <div style={{
           position:'absolute', inset:0,
           background:'radial-gradient(ellipse at 60% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)',
         }}/>
       </div>
 
-      {/* Gold rule top */}
       <div style={{ position:'absolute', top:0, left:0, right:0, height:'1px', zIndex:1,
         background:'linear-gradient(90deg,transparent,var(--gold),transparent)' }}/>
 
       <div style={{ position:'relative', zIndex:1, maxWidth:'1280px', margin:'0 auto' }}>
-        {/* Section heading */}
-        <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'3.5rem', gap:'1.5rem' }}>
+        <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'clamp(2rem,4vw,3.5rem)', gap:'1rem' }}>
           <div>
-            <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.6rem', letterSpacing:'0.38em', textTransform:'uppercase', color:'var(--gold)', fontWeight:300, marginBottom:'0.75rem' }}>
+            <p style={{ fontFamily:'Jost,sans-serif', fontSize:'clamp(0.52rem,1.5vw,0.6rem)', letterSpacing:'0.38em', textTransform:'uppercase', color:'var(--gold)', fontWeight:300, marginBottom:'0.75rem' }}>
               Our Track Record
             </p>
-            <h2 style={{ fontFamily:'Cormorant Garamond,serif', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:300, color:'rgba(255,255,255,0.92)', lineHeight:1.2 }}>
+            <h2 style={{ fontFamily:'Cormorant Garamond,serif', fontSize:'clamp(1.7rem,4vw,2.8rem)', fontWeight:300, color:'rgba(255,255,255,0.92)', lineHeight:1.2 }}>
               Numbers That Define{' '}
               <span style={{ fontStyle:'italic', background:'linear-gradient(135deg,#E2C07A,#C9A84C)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>
                 Excellence
               </span>
             </h2>
           </div>
-          <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.75rem', color:'rgba(255,255,255,0.3)', fontWeight:300, maxWidth:'280px', lineHeight:1.7, letterSpacing:'0.03em' }}>
+          <p style={{ fontFamily:'Jost,sans-serif', fontSize:'clamp(0.65rem,1.5vw,0.75rem)', color:'rgba(255,255,255,0.3)', fontWeight:300, maxWidth:'min(280px,100%)', lineHeight:1.7, letterSpacing:'0.03em' }}>
             Every metric reflects a milestone in our relentless pursuit of extraordinary real estate outcomes.
           </p>
         </div>
 
-        {/* Grid */}
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:'1rem' }}>
+        {/* Grid — 3 cols desktop, 2 cols tablet, 1 col mobile */}
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(260px,100%),1fr))', gap:'clamp(0.6rem,1.5vw,1rem)' }}>
           {STATS.map((s, i) => <StatCard key={i} s={s} delay={i * 110} />)}
         </div>
       </div>
 
-      {/* Gold rule bottom */}
       <div style={{ position:'absolute', bottom:0, left:0, right:0, height:'1px', zIndex:1,
         background:'linear-gradient(90deg,transparent,var(--gold),transparent)' }}/>
     </section>
