@@ -8,18 +8,7 @@ const TESTIMONIALS = [
     role: 'Director, Cornerstone Developments · Pune',
     initials: 'AM',
   },
-  {
-    quote: "Swapnil and his team navigated a complex pre-leased portfolio acquisition with exceptional professionalism. Every promise made was delivered upon.",
-    name: 'Reena Kapoor',
-    role: 'Chief Investment Officer, Axis Capital · Mumbai',
-    initials: 'RK',
-  },
-  {
-    quote: "From the first call to the final registration, NBR's process felt seamless. Their Dubai connections gave us access no other broker could offer.",
-    name: 'Sanjay Thakur',
-    role: 'MD, Skyline Ventures · Dubai',
-    initials: 'ST',
-  },
+  
 ]
 
 const LOGOS = [

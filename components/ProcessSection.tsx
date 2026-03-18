@@ -88,12 +88,7 @@ export default function ProcessSection() {
         {/* Steps */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '0', position: 'relative' }}>
 
-          {/* Connector line behind cards */}
-          <div style={{
-            position: 'absolute', top: '52px', left: 'calc(16.66% + 1px)', right: 'calc(16.66% + 1px)',
-            height: '1px', background: 'linear-gradient(90deg,var(--gold),rgba(201,168,76,0.2),var(--gold))',
-            zIndex: 0,
-          }}/>
+          
 
           {STEPS.map(({ num, title, sub, body, Icon }, i) => (
             <div
