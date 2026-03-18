@@ -224,7 +224,7 @@ export default function TestimonialsSection() {
           color:'rgba(255,255,255,0.52)',
           lineHeight:1.65, marginBottom:'2rem',
         }}>
-          NBR Realty's execution on our 300-acre mandate was extraordinary. Their market insight and deep network unlocked value we hadn't imagined possible.
+          Nation Buys Realtor's execution on our 300-acre mandate was extraordinary. Their market insight and deep network unlocked value we hadn't imagined possible.
         </p>
 
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:'1.25rem' }}>
