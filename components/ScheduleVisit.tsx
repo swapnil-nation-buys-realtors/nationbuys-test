@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 const CITIES = [
-  { name: 'Pune', tagline: 'Maharashtra Growth Capital', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80' },
-  { name: 'Mumbai', tagline: 'The Financial Powerhouse', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80' },
-  { name: 'Goa', tagline: 'Coastal Luxury & Leisure', img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80' },
-  { name: 'Dubai', tagline: 'Global Investment Frontier', img: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80' },
+  { name: 'Pune', tagline: 'Maharashtra Growth Capital', img: '/Pune.jpg' },
+  { name: 'Mumbai', tagline: 'The Financial Powerhouse', img: '/Mumbai.png' },
+  { name: 'Goa', tagline: 'Coastal Luxury & Leisure', img: '/Goa.png' },
+  { name: 'Dubai', tagline: 'Global Investment Frontier', img: '/Dubai.png' },
 ]
 
 export default function ScheduleVisit() {

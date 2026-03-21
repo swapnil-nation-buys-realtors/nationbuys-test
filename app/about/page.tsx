@@ -89,10 +89,10 @@ const VALUES = [
 const MOSAIC = [
   { src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85&auto=format', label: 'Mumbai' },
   { src: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=85&auto=format', label: 'Dubai' },
-  { src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85&auto=format', label: 'Pune' },
+  { src: '/Plotting-3.png', label: 'Pune' },
   { src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=85&auto=format', label: 'Goa' },
   { src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85&auto=format', label: 'Reotek' },
-  { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=85&auto=format', label: 'Industrial' },
+  { src: '/Commercial-2.png', label: 'Industrial' },
 ]
 
 /* ════════════════════════════════════════════ */
@@ -163,11 +163,11 @@ export default function AboutPage() {
         <div ref={intro.ref} className="ai__wrap">
           <div className={`ai__photos rv-left ${intro.visible ? 'vis' : ''}`}>
             <div className="ai__ph-main">
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=85" alt="Nation Buys Realtors land transaction" />
+              <img src="/replace with red house.jpeg" alt="Nation Buys Realtors land transaction" />
               <div className="ai__ph-grad" />
             </div>
             <div className="ai__ph-stack">
-              <div className="ai__ph-sm"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=85" alt="Advisory" /></div>
+              <div className="ai__ph-sm"><img src="/Replace with small image.png" alt="Advisory" /></div>
               <div className="ai__ph-sm"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&q=85" alt="Office" /></div>
             </div>
             <div className="ai__chip">
@@ -186,10 +186,10 @@ export default function AboutPage() {
             <p className="bt mb-7">Led by Swapnil Bora with over 17 years of mastery, our "We Succeed Together" ethos drives proactive strategies far beyond ordinary plots across Pune, Mumbai, Goa, and Dubai.</p>
             <div className="ai__cities">
               {[
-                { city:'Pune',   img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=240&q=75' },
-                { city:'Mumbai', img:'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=240&q=75' },
-                { city:'Goa',    img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=240&q=75' },
-                { city:'Dubai',  img:'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=240&q=75' },
+                { city:'Pune',   img:'/Pune.jpg' },
+                { city:'Mumbai', img:'/Mumbai.png' },
+                { city:'Goa',    img:'/GOA.png' },
+                { city:'Dubai',  img:'/Dubai.png' },
               ].map(({ city, img }) => (
                 <div key={city} className="ai__city">
                   <div className="ai__city-img">
@@ -244,14 +244,14 @@ export default function AboutPage() {
           <div className="avm__cards">
             {[
               {
-                tag:'Vision', img:'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=75',
+                tag:'Vision', img:"/Pune's Foremost Catalyst-3.png",
                 icon:<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="22" height="22"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" strokeLinecap="round" strokeLinejoin="round"/></svg>,
                 heading:"Pune's Foremost Catalyst for Iconic Developments",
                 body:"To be Pune's foremost catalyst for transforming vast land parcels into iconic developments and securing enduring value through premier pre-leased assets  across India and beyond.",
                 delay:0,
               },
               {
-                tag:'Mission', img:'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=75',
+                tag:'Mission', img:"/Empowering Landowners & Developers Through Expertise.png",
                 icon:<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="22" height="22"><path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round"/></svg>,
                 heading:"Empowering Landowners & Developers Through Expertise",
                 body:"We empower landowners and developers by unlocking the full potential of expansive holdings and high-yield pre-leased properties through expert matchmaking, market foresight, and seamless execution.",
@@ -336,11 +336,11 @@ export default function AboutPage() {
         <div className="atm__strip">
           {[
             'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=70',
-            'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=70',
+            '/bulid0.jpg',
             'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=500&q=70',
             'https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=70',
-            'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=70',
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&q=70',
+            '/Dubai.png',
+            '/Pune.jpg',
           ].map((src,i) => (
             <div key={i} className="atm__strip-cell">
               <img src={src} alt="" />
@@ -399,7 +399,7 @@ export default function AboutPage() {
       ══════════════════════════════════════ */}
       <section className="acta">
         <div className="acta__bg">
-          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=75" alt="" />
+          <img src="/replace with red house.jpeg" alt="" />
           <div className="acta__bg-ov" />
         </div>
         <div className="acta__glow" />
@@ -495,7 +495,7 @@ export default function AboutPage() {
         .ah__eyebrow { font-family:'Jost',sans-serif; font-size:.58rem; letter-spacing:.32em; text-transform:uppercase; color:rgba(201,168,76,.6); font-weight:300; margin-bottom:1.5rem; display:flex; align-items:center; gap:10px; }
         .ah__eyebrow-dash { display:inline-block; width:24px; height:1px; background:rgba(201,168,76,.5); flex-shrink:0; }
         .ah__h1 { font-family:'Cormorant Garamond',serif; font-weight:300; line-height:.88; margin-bottom:1.5rem; }
-        .ah__h1-ghost { display:block; font-size:clamp(3.5rem,6.5vw,7rem); color:rgba(255,255,255,.13); letter-spacing:-.01em; }
+        .ah__h1-ghost { display:block; font-size:clamp(3.5rem,6.5vw,7rem); color:rgba(255,255,255,255); letter-spacing:-.01em; }
         .ah__h1-gold  { display:block; font-size:clamp(5rem,10vw,11rem); background:linear-gradient(135deg,#E2C07A 0%,#C9A84C 50%,#A07830 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:-.025em; line-height:.85; }
         .ah__tagline { font-family:'Jost',sans-serif; font-size:.78rem; color:rgba(255,255,255,.36); font-weight:300; line-height:1.85; max-width:380px; margin-bottom:2rem; }
         .ah__stats { display:flex; align-items:stretch; gap:0; margin-bottom:2rem; border:1px solid rgba(201,168,76,.12); width:fit-content; }
