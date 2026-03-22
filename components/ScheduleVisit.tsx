@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react'
 const CITIES = [
   { name: 'Pune', tagline: 'Maharashtra Growth Capital', img: '/Pune.jpg' },
   { name: 'Mumbai', tagline: 'The Financial Powerhouse', img: '/Mumbai.png' },
-  { name: 'Goa', tagline: 'Coastal Luxury & Leisure', img: '/Goa.png' },
+  { name: 'Goa', tagline: 'Coastal Luxury & Leisure', img: '/GOA.png' },
   { name: 'Dubai', tagline: 'Global Investment Frontier', img: '/Dubai.png' },
 ]
 

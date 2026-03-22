@@ -28,7 +28,7 @@ const SERVICES = [
     title: 'Data Center Land',
     desc: 'Prime expansive sites optimized for next-generation data center developments with power, connectivity, and expansion capacity.',
     tag: 'Tech',
-    img: '/Data Center Land -1.png',
+    img: '/Data Centre Land -1.png',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="24" height="24">
         <rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/>
