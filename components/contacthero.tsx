@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react'
 
 const FLOATING_IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=800',
+    src: '/sky.jpg',
     // top-right image
     desktopStyle: { top: '18%', right: '4%', width: '180px' },
     tabletStyle:  { top: '10%', right: '2%', width: '130px' },
     mobileStyle:  { top: '8%',  right: '1rem', width: '90px' },
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
+    src: '/office.jpg',
     // bottom-right image
     desktopStyle: { bottom: '18%', right: '10%', width: '220px' },
     tabletStyle:  { bottom: '14%', right: '2%', width: '140px' },

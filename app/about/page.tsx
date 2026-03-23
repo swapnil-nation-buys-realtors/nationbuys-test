@@ -87,10 +87,10 @@ const VALUES = [
 ]
 
 const MOSAIC = [
-  { src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85&auto=format', label: 'Mumbai' },
-  { src: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=85&auto=format', label: 'Dubai' },
-  { src: '/Plotting-3.png', label: 'Pune' },
-  { src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=85&auto=format', label: 'Goa' },
+  { src: '/Mumbai.png', label: 'Mumbai' },
+  { src: '/Dubai.png', label: 'Dubai' },
+  { src: '/Pune.jpg', label: 'Pune' },
+  { src: 'GOA.png', label: 'Goa' },
   { src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85&auto=format', label: 'Reotek' },
   { src: '/Commercial-2.png', label: 'Industrial' },
 ]
