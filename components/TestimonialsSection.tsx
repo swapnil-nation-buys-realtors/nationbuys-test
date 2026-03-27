@@ -211,11 +211,7 @@ export default function TestimonialsSection() {
 
       {/* Testimonial quote */}
       <div className="trust-quote" style={{ maxWidth:'720px', margin:'4.5rem auto 0', padding:'0 5rem', textAlign:'center' }}>
-        <div style={{
-          fontFamily:'Cormorant Garamond,serif',
-          fontSize:'5rem', lineHeight:0.8, marginBottom:'1.25rem',
-          color:'transparent', WebkitTextStroke:'1px rgba(201,168,76,0.3)',
-        }}>"</div>
+        
 
         <p style={{
           fontFamily:'Cormorant Garamond,serif',
@@ -224,17 +220,15 @@ export default function TestimonialsSection() {
           color:'rgba(255,255,255,0.52)',
           lineHeight:1.65, marginBottom:'2rem',
         }}>
-          Nation Buys Realtor's execution on our 300-acre mandate was extraordinary. Their market insight and deep network unlocked value we hadn't imagined possible.
+         Aligned with leading developers, investors, and global brands, our partnerships are a reflection of the trust, access, and expertise that define our approach.
         </p>
 
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:'1.25rem' }}>
           <div style={{ height:'1px', width:'36px', background:'rgba(201,168,76,0.3)', flexShrink:0 }}/>
           <div>
-            <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.68rem', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', fontWeight:500 }}>
-              Arvind Mehta
-            </p>
+           
             <p style={{ fontFamily:'Jost,sans-serif', fontSize:'0.58rem', color:'rgba(255,255,255,0.25)', fontWeight:300, marginTop:'2px' }}>
-              Director, Cornerstone Developments · Pune
+       
             </p>
           </div>
           <div style={{ height:'1px', width:'36px', background:'rgba(201,168,76,0.3)', flexShrink:0 }}/>
