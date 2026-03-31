@@ -61,7 +61,7 @@ const TIMELINE = [
   { year: '2010', title: 'First Mega-Mandate',body: 'Facilitated a landmark 14-acre transaction in Pune\'s emerging corridors, setting the benchmark for large-scale land brokerage.' },
   { year: '2013', title: 'Legacy Achieved',   body: 'Surpassed 200+ acres transacted, ₹200 Cr+ in active mandates, and 98% client retention.' },
   { year: '2015', title: 'Mumbai & Goa Expansion', body: 'Extended footprint to Mumbai and Navi Mumbai, capturing premium commercial land and pre-leased portfolio mandates and Goa\'s luxury coastal land.' },
-  { year: '2021', title: 'Dubai',             body: 'Crossed national borders with strategic mandates in Dubai\'s high-yield commercial real estate.' },
+  { year: '2019', title: 'Dubai',             body: 'Crossed national borders with strategic mandates in Dubai\'s high-yield commercial real estate.' },
   { year: '2026', title: 'Reotek Launch',     body: 'Launched Reotek  delivering 1M sq ft of managed enterprise office spaces across Pune and Mumbai.' },
   
 
