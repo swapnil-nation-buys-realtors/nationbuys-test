@@ -25,6 +25,8 @@ const RETAIL_LOGOS = [
   { name: 'LAMBORGHINI',   sub: 'Automobiles'    },
   { name: 'LEXUS',         sub: 'Automobiles'    },
   { name: 'ROYAL ENFIELD', sub: 'Motors'         },
+  { name: 'INDIAN',        sub: 'Motors'         },
+  { name: 'BENELLI', sub: 'Motors'         },
   { name: 'ZARA',          sub: 'Fashion'        },
   { name: 'H&M',           sub: 'Lifestyle'      },
   { name: 'HAMLEYS',       sub: 'Toys'           },
@@ -33,6 +35,7 @@ const RETAIL_LOGOS = [
   { name: 'BATA',          sub: 'Footwear'       },
   { name: 'REEBOK',        sub: 'Sports'         },
   { name: 'PANTALOONS',    sub: 'Fashion'        },
+  { name: 'SHOPPERS STOP',    sub: 'Fashion'        },
   { name: 'WESTSIDE',      sub: 'Lifestyle'      },
   { name: 'INOX',          sub: 'Cinemas'        },
   { name: 'PVR',           sub: 'Cinemas'        },
@@ -46,6 +49,36 @@ const RETAIL_LOGOS = [
   { name: 'DECATHLON',     sub: 'Sports'         },
   { name: 'MALABAR',       sub: 'Gold & Diamonds'},
   { name: 'AIRTEL',        sub: 'Telecom'        },
+  { name: 'MASERATI',      sub: 'Automobiles'    },
+  { name: 'LIFESTYLE',     sub: 'Fashion'        },
+  { name: 'GO COLORS!',    sub: 'Fashion'        },
+  { name: 'WILLS LIFESTYLE', sub: 'Lifestyle'    },
+  { name: 'JOCKEY',        sub: 'Apparel'        },
+  { name: 'VAN HEUSEN',    sub: 'Apparel'        },
+  { name: 'ARVIND',        sub: 'Lifestyle'      },
+  { name: 'BENETTON',      sub: 'Fashion'        },
+  { name: 'ARROW',         sub: 'Apparel'        },
+  { name: 'AND',           sub: 'Fashion'        },
+  { name: 'GAS',           sub: 'Fashion'        },
+  { name: 'U.S. POLO ASSN.', sub: 'Apparel'      },
+  { name: 'INDIAN TERRAIN', sub: 'Apparel'       },
+  { name: '109°F',         sub: 'Fashion'        },
+  { name: 'CARNIVAL',      sub: 'Cinemas'        },
+  { name: 'MOVIE TIME',    sub: 'Cinemas'        },
+  { name: 'SRS CINEMAS',   sub: 'Cinemas'        },
+  { name: 'BURGER KING',   sub: 'Restaurants'    },
+  { name: 'DUNKIN DONUTS', sub: 'Beverages'      },
+  { name: 'THE BEER CAFE', sub: 'Restaurants'    },
+  { name: 'MAMAGOTO',      sub: 'Restaurants'    },
+  { name: 'CAFÉ COFFEE DAY', sub: 'Coffee'       },
+  { name: 'GELATO ITALIANO', sub: 'Desserts'     },
+  { name: 'MASPAR',        sub: 'Home Decor'     },
+  { name: 'THEOBROMA',     sub: 'Bakery'         },
+  { name: 'MAINLAND CHINA', sub: 'Restaurants'    },
+  { name: 'BELGIAN WAFFLE', sub: 'Desserts'      },
+  { name: 'GITANJALI',     sub: 'Jewellery'      },
+  { name: 'SWISS INTERNATIONAL', sub: 'Hotels'   },
+  { name: "D'DECOR",       sub: 'Home Decor'     }
 ]
 
 const ALL_DEV    = [...DEVELOPER_LOGOS, ...DEVELOPER_LOGOS]
@@ -170,7 +203,7 @@ export default function TestimonialsSection() {
           <div style={{
             display:'flex', alignItems:'center',
             width:'max-content',
-            animation:'marquee 50s linear infinite reverse',
+            animation:'marquee 90s linear infinite reverse',
           }}>
             {ALL_RETAIL.map((logo, i) => (
               <div key={i} className="trust-logo-tile" style={{

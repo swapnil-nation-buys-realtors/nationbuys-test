@@ -73,7 +73,7 @@ const TEAM = [
 ]
 
 const STATS = [
-  { val: 500, suffix: '+',   label: 'Acres Transacted',  sub: 'Prime land parcels' },
+  { val: 200, suffix: '+',   label: 'Acres Transacted',  sub: 'Prime land parcels' },
   { val: 200, suffix: 'Cr+', label: 'Portfolio Value',   sub: 'Active mandates' },
   { val: 17,  suffix: '+',   label: 'Years of Mastery',  sub: 'Led by Swapnil Bora' },
   { val: 4,   suffix: '',    label: 'Strategic Markets', sub: 'Pune · Mumbai · Goa · Dubai' },
