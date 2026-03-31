@@ -268,7 +268,7 @@ export default function LeadGenSection() {
                 </svg>
               ),
               label: 'Phone',
-              value: '+91 98765 43210',
+              value: '+91 98900 29291',
             },
             {
               icon: (
@@ -277,7 +277,7 @@ export default function LeadGenSection() {
                 </svg>
               ),
               label: 'Email',
-              value: 'advisory@nbrrealty.com',
+              value: 'swapnil@nationbuysrealtors.com',
             },
             {
               icon: (

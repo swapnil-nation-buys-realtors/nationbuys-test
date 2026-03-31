@@ -140,9 +140,9 @@ export default function LetsTalkSection() {
                 </svg>
               }
               label="Call Us"
-              primary="+91 98765 43210"
+              primary="+91 98900 29291"
               secondary="Mon – Sat, 9 am – 7 pm IST"
-              href="tel:+919876543210"
+              href="tel:+91 98900 29291"
             />
             <ContactItem
               icon={
@@ -151,9 +151,9 @@ export default function LetsTalkSection() {
                 </svg>
               }
               label="Email Us"
-              primary="hello@nbrrealty.com"
+              primary="swapnil@nationbuysrealtors.com"
               secondary="We respond within 24 hours"
-              href="mailto:hello@nbrrealty.com"
+              href="mailto:swapnil@nationbuysrealtors.com"
             />
             <ContactItem
               icon={
