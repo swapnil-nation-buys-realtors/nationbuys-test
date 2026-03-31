@@ -145,7 +145,7 @@ export default function AboutPage() {
           </h1>
           <p className="ah__tagline">Redefining how India's most ambitious land mandates get done  through expertise, trust, and an unrelenting drive to create lasting value.</p>
           <div className="ah__stats">
-            {[['500+','Acres'],['17+','Years'],['98%','Retention']].map(([n,l]) => (
+            {[['200+','Acres'],['17+','Years'],['98%','Retention']].map(([n,l]) => (
               <div key={l} className="ah__stat">
                 <span className="ah__stat-num">{n}</span>
                 <span className="ah__stat-lbl">{l}</span>

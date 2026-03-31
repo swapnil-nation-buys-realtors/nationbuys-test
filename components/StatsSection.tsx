@@ -2,11 +2,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
-  { label: 'Acres Transacted',    val: 500,  suffix: '+',   progress: 85, sub: 'Prime land parcels' },
+  { label: 'Acres Transacted',    val: 200,  suffix: '+',   progress: 85, sub: 'Prime land parcels' },
   { label: 'Portfolio Value',     val: 200,  suffix: 'Cr+', progress: 90, sub: 'Active mandates' },
   { label: 'Years of Mastery',    val: 17,   suffix: '+',   progress: 95, sub: 'Led by Swapnil Bora' },
   { label: 'Strategic Markets',   val: 4,    suffix: '',    progress: 70, sub: 'Pune · Mumbai · Goa · Dubai' },
-  { label: 'Mandates Executed',   val: 50,   suffix: '+',   progress: 80, sub: 'High-value closures' },
+  { label: 'Mandates Executed',   val: 5,   suffix: '+',   progress: 80, sub: 'High-value closures' },
   { label: 'Client Retention',    val: 98,   suffix: '%',   progress: 98, sub: 'Trust & repeat business' },
 ]
 
