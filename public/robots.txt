@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary Next.js and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.nationbuysrealtors.com//sitemap.xml
