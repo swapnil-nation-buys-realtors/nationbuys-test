@@ -263,6 +263,26 @@ export default function LeadGenSection() {
           {[
             {
               icon: (
+                // Building icon for Head Office
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="18" height="18">
+                  <path d="M6 20V7a2 2 0 012-2h8a2 2 0 012 2v13" strokeLinecap="round" strokeLinejoin="round" />
+                  <line x1="3" y1="20" x2="21" y2="20" strokeLinecap="round" />
+                  <rect x="9" y="14" width="2" height="2" rx="0.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="13" y="14" width="2" height="2" rx="0.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="9" y="10" width="2" height="2" rx="0.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="13" y="10" width="2" height="2" rx="0.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              ),
+              label: 'Head Office',
+              value: (
+                <span style={{ whiteSpace: 'pre-line' }}>
+                  Century Arcade, Office No.213,{"\n"}
+                  Plot No.243/244, Narangi Baug Road, Boatclub, Pune - 411001
+                </span>
+              ),
+            },
+            {
+              icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="18" height="18">
                   <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

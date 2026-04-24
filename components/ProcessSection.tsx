@@ -1,27 +1,53 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
+import Link from 'next/link'
+
 const STEPS = [
   {
     num: '01',
     title: 'Call Us',
     sub: 'Begin the Conversation',
     body: 'Reach out to our advisory team for a confidential consultation. We listen to your mandate  whether buying, selling, or leasing  and align it with our curated portfolio.',
-    Icon: () => (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
-        <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
+    Icon: ({ onClick }: { onClick?: () => void }) => (
+      <button
+        type="button"
+        aria-label="Copy phone number"
+        onClick={onClick}
+        style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer', color: 'inherit' }}
+        tabIndex={0}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
+          <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
     ),
+    onIconClick: async () => {
+      try {
+        await navigator.clipboard.writeText('98900 29291')
+        alert('Phone number copied to clipboard!')
+      } catch (e) {
+        // Optionally, handle error -- for future scope
+      }
+    },
   },
   {
     num: '02',
     title: 'Schedule the Visit',
     sub: 'Experience the Opportunity',
     body: 'We arrange exclusive, curated site visits at your convenience  across Pune, Mumbai, Goa, or Dubai. Our experts guide you through every detail, from due diligence to development potential.',
-    Icon: () => (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
-        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
+    Icon: ({ onClick }: { onClick?: () => void }) => (
+      <Link href="/contact#enquire" legacyBehavior passHref>
+        <a
+          aria-label="Go to Enquire section"
+          style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer', color: 'inherit', display: 'inline-block' }}
+          tabIndex={0}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
+            <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
+      </Link>
     ),
   },
   {
@@ -29,7 +55,7 @@ const STEPS = [
     title: 'Close the Deal',
     sub: 'Seal with Confidence',
     body: 'From negotiation to RERA-compliant documentation, our end-to-end transaction management ensures a seamless closure so you can focus on the vision, not the paperwork.',
-    Icon: () => (
+    Icon: ({ onClick }: { onClick?: () => void }) => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
@@ -50,6 +76,11 @@ export default function ProcessSection() {
     if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
   }, [])
+
+  // Handler for icon click for step 01
+  const handleIconClick = (step: any) => {
+    if (step.onIconClick) step.onIconClick()
+  }
 
   return (
     <section ref={ref} style={{ background: 'var(--charcoal)', padding: '5rem 1.5rem', position: 'relative', overflow: 'hidden' }}>
@@ -87,9 +118,9 @@ export default function ProcessSection() {
 
         {/* Steps */}
         <div className="proc-grid">
-          {STEPS.map(({ num, title, sub, body, Icon }, i) => (
+          {STEPS.map(({ num, title, sub, body, Icon, onIconClick }, i) => (
             <div
-              key={i}
+              key={num}
               className="proc-anim proc-card"
               style={{
                 opacity: 0, transform: 'translateY(28px)',
@@ -117,7 +148,12 @@ export default function ProcessSection() {
                   color: 'var(--gold)', flexShrink: 0,
                   position: 'relative',
                 }}>
-                  <Icon/>
+                  {/* Icon clickable for 01 and 02, normal for 03 */}
+                  {onIconClick ? (
+                    <Icon onClick={() => handleIconClick(STEPS[i])} />
+                  ) : (
+                    <Icon />
+                  )}
                   <span style={{
                     position: 'absolute', top: '-6px', right: '-6px',
                     width: '18px', height: '18px', borderRadius: '50%',
