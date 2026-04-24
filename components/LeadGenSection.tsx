@@ -232,7 +232,7 @@ export default function LeadGenSection() {
   // ──────────────────────────────────────────────────────────────────────────
 
   return (
-    <section ref={ref} style={{ background: 'var(--obsidian)', padding: '5rem 1.5rem', position: 'relative', overflow: 'hidden' }}>
+    <section id="enquire" ref={ref} style={{ background: 'var(--obsidian)', padding: '5rem 1.5rem', position: 'relative', overflow: 'hidden' }}>
 
       {/* Radial glow */}
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 60%)', pointerEvents: 'none' }} />

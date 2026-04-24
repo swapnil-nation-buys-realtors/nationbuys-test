@@ -103,7 +103,7 @@ export default function Header() {
             )
           })}
 
-          <Link href="/contact" className="header-enquire-btn" style={{
+          <Link href="/contact#enquire" className="header-enquire-btn" style={{
             fontFamily: 'Jost, sans-serif',
             fontSize: 'clamp(0.58rem, 1vw, 0.65rem)',
             fontWeight: 500,
@@ -181,7 +181,7 @@ export default function Header() {
           }}>{label}</Link>
         ))}
 
-        <Link href="/contact" onClick={() => setOpen(false)} style={{
+        <Link href="/contact#enquire" onClick={() => setOpen(false)} style={{
           display: 'inline-block',
           marginTop: '2rem',
           fontFamily: 'Jost, sans-serif',
