@@ -103,7 +103,16 @@ export default function Header() {
             )
           })}
 
-          <Link href="/contact#enquire" className="header-enquire-btn" style={{
+          <Link href="/contact#enquire" className="header-enquire-btn" onClick={(e) => {
+            if (typeof window !== 'undefined' && window.location.pathname.startsWith('/contact')) {
+              const elem = document.getElementById('enquire');
+              if (elem) {
+                e.preventDefault();
+                elem.scrollIntoView({ behavior: 'smooth' });
+                window.history.pushState(null, '', '#enquire');
+              }
+            }
+          }} style={{
             fontFamily: 'Jost, sans-serif',
             fontSize: 'clamp(0.58rem, 1vw, 0.65rem)',
             fontWeight: 500,
@@ -181,7 +190,17 @@ export default function Header() {
           }}>{label}</Link>
         ))}
 
-        <Link href="/contact#enquire" onClick={() => setOpen(false)} style={{
+        <Link href="/contact#enquire" onClick={(e) => {
+          setOpen(false);
+          if (typeof window !== 'undefined' && window.location.pathname.startsWith('/contact')) {
+            const elem = document.getElementById('enquire');
+            if (elem) {
+              e.preventDefault();
+              elem.scrollIntoView({ behavior: 'smooth' });
+              window.history.pushState(null, '', '#enquire');
+            }
+          }
+        }} style={{
           display: 'inline-block',
           marginTop: '2rem',
           fontFamily: 'Jost, sans-serif',

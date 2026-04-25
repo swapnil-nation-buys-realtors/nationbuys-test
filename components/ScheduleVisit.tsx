@@ -55,7 +55,16 @@ export default function ScheduleVisit() {
             <p style={{ fontFamily: 'Jost,sans-serif', fontSize: '0.72rem', color: 'rgba(0,0,0,0.4)', fontWeight: 300, lineHeight: 1.75, marginBottom: '1.25rem' }}>
               Experience prime land parcels and pre-leased assets firsthand. Our team curates every visit for a decisive, informed investment experience.
             </p>
-            <Link href="/contact#enquire" style={{
+            <Link href="/contact#enquire" onClick={(e) => {
+              if (typeof window !== 'undefined' && window.location.pathname.startsWith('/contact')) {
+                const elem = document.getElementById('enquire');
+                if (elem) {
+                  e.preventDefault();
+                  elem.scrollIntoView({ behavior: 'smooth' });
+                  window.history.pushState(null, '', '#enquire');
+                }
+              }
+            }} style={{
               display: 'inline-flex', alignItems: 'center', gap: '10px',
               fontFamily: 'Jost,sans-serif', fontSize: '0.65rem',
               fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase',

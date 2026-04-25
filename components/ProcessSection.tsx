@@ -37,16 +37,19 @@ const STEPS = [
     sub: 'Experience the Opportunity',
     body: 'We arrange exclusive, curated site visits at your convenience  across Pune, Mumbai, Goa, or Dubai. Our experts guide you through every detail, from due diligence to development potential.',
     Icon: ({ onClick }: { onClick?: () => void }) => (
-      <Link href="/contact#enquire" legacyBehavior passHref>
-        <a
-          aria-label="Go to Enquire section"
-          style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer', color: 'inherit', display: 'inline-block' }}
-          tabIndex={0}
-        >
+      <Link href="/contact#enquire" passHref onClick={(e) => {
+        if (typeof window !== 'undefined' && window.location.pathname.startsWith('/contact')) {
+          const elem = document.getElementById('enquire');
+          if (elem) {
+            e.preventDefault();
+            elem.scrollIntoView({ behavior: 'smooth' });
+            window.history.pushState(null, '', '#enquire');
+          }
+        }
+      }} style={{ color: 'inherit', textDecoration: 'none' }}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" width="26" height="26">
             <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </a>
       </Link>
     ),
   },

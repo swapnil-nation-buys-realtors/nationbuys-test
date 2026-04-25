@@ -113,7 +113,16 @@ export default function HeroSlider() {
         </p>
 
         <div style={{ display:'flex', gap:'0.85rem', flexWrap:'wrap' }}>
-          <Link href="/contact#enquire" style={{
+          <Link href="/contact#enquire" onClick={(e) => {
+            if (typeof window !== 'undefined' && window.location.pathname.startsWith('/contact')) {
+              const elem = document.getElementById('enquire');
+              if (elem) {
+                e.preventDefault();
+                elem.scrollIntoView({ behavior: 'smooth' });
+                window.history.pushState(null, '', '#enquire');
+              }
+            }
+          }} style={{
             fontFamily:'Jost,sans-serif', fontSize:'0.68rem',
             fontWeight:500, letterSpacing:'0.2em', textTransform:'uppercase',
             background:'linear-gradient(135deg,var(--gold-light),var(--gold))',
