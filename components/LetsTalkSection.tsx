@@ -163,8 +163,8 @@ export default function LetsTalkSection() {
                 </svg>
               }
               label="Our Markets"
-              primary="Pune · Mumbai · Goa"
-              secondary="Dubai · International"
+              primary="Pune · Mumbai · Goa · Dubai"
+              secondary="International"
               href="/about"
               isLast
             />

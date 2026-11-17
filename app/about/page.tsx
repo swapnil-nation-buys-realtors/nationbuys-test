@@ -69,7 +69,6 @@ const TIMELINE = [
 
 const TEAM = [
   { name: 'Swapnil Bora',  role: 'Founder & Managing Director', exp: '17+ Yrs', desc: 'Visionary architect behind Nation Buys Realtors \'s rise  expert in mega-parcel strategy, developer relations, and landmark outcomes.', initial: 'SB', color: '#C9A84C' },
-  { name: 'Preeti W',      role: 'Property Consultant',         exp: '12 Yrs',  desc: 'Manages end-to-end pre-leased transactions ensuring optimal yield alignment for investors.',                                 initial: 'PW', color: '#A07830' },
 ]
 
 const STATS = [
@@ -616,7 +615,7 @@ export default function AboutPage() {
         /* ── 2-card centered grid ── */
         .atm__grid {
           display: grid;
-          grid-template-columns: repeat(2, minmax(0, 460px));
+          grid-template-columns: minmax(0, 460px);
           gap: 24px;
           justify-content: center;
         }
@@ -734,7 +733,7 @@ export default function AboutPage() {
           .atl__item:nth-child(n+5) { border-bottom:none; }
           .atl__item:nth-child(3n)  { border-right:1px solid rgba(201,168,76,.08); }
 
-          .atm__grid { grid-template-columns:repeat(2,minmax(0,460px)); gap:16px; }
+          .atm__grid { grid-template-columns:minmax(0,460px); gap:16px; }
           .atm__join { flex-wrap:wrap; justify-content:center; }
           .atm__join-line { display:none; }
 
