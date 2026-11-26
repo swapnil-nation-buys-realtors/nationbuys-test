@@ -112,15 +112,22 @@ export default function HeroSlider() {
           Transforming visionary mandates into landmark developments across Pune, Mumbai, Goa &amp; Dubai.
         </p>
 
-        <img
-          src="/nextech-verified-banner.png"
-          alt="Nation Buys Realtors is a NexTech Verified Broker"
+        <a
+          href="https://nextechplatform.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display:'block',
-            width:'100%', maxWidth:'580px', height:'auto',
+            width:'100%', maxWidth:'580px',
             marginTop:'-1rem', marginBottom:'1.5rem',
           }}
-        />
+        >
+          <img
+            src="/nextech-verified-banner.png"
+            alt="Nation Buys Realtors is a NexTech Verified Broker"
+            style={{ display:'block', width:'100%', height:'auto' }}
+          />
+        </a>
 
         <div style={{ display:'flex', gap:'0.85rem', flexWrap:'wrap' }}>
           <Link href="/contact#enquire" onClick={(e) => {
